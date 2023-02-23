@@ -15,7 +15,15 @@ router.put('/fornecedores/:id', FornecedorController.alterar);
 // rota para excluir fornecedor
 router.delete('/fornecedores/:id', FornecedorController.excluir);
 
-
-
+// rota de todos os serviços
+router.get('/servicos', ServicoController.buscarTodos);
+// rota para um serviço específico via id
+router.get('/servicos/:id', ServicoController.buscarUm);
+// rota para inserir novo serviço
+router.post('/servicos', ServicoController.inserir);
+// rota para alterar serviço
+router.put('/servicos/:id', ServicoController.alterar);
+// rota para excluir serviço
+router.delete('/servicos/:id', ServicoController.excluir);
 
 module.exports = router;
